@@ -92,18 +92,7 @@ The 291,063 × 10,000 training matrix is stored as a **SciPy CSR sparse matrix: 
 - `MultinomialNB(alpha=1.0)` and `ComplementNB(alpha=1.0)` — Laplace smoothing; `LinearSVC` with
   balanced class weights as a reference model.
 
-## Limitations
 
-- **Star ratings are noisy labels.** Some reviews contradict their rating, e.g. a 5 ★ review stating
-  "I would not recommend it to my worst enemy". Several of the model's most confident errors are
-  cases like this, so 100% accuracy is not achievable on this data.
-- **Precision–recall trade-off.** Balanced class weights let the model catch 89.3% of negative
-  reviews, but about one in three reviews it flags as Negative is actually Positive (precision 66.3%).
-- **Bag-of-words.** Word order beyond two-word phrases is not modelled: "Great price, but my dog would
-  not eat it" is scored slightly Positive. Phrases such as *two star* and *four star* rank among the
-  strongest features because some reviewers write their rating in the text.
-- The model is binary; neutral (3 ★) reviews are forced into one of the two classes.
-- The data covers 1999–2012 food reviews; performance on other products or more recent text is untested.
 
 ## Project structure
 
