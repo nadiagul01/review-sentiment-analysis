@@ -1,0 +1,19 @@
+# requirements.txt - Python packages for Project 4 (NLP & Sentiment Analysis)
+# Install with:  pip install -r requirements.txt
+
+# Data handling
+pandas>=2.2
+numpy>=2.0
+scipy>=1.13              # CSR sparse matrices
+
+# NLP: tokenization, stop-words, POS tagging, WordNet lemmatizer
+nltk>=3.9
+
+# TF-IDF, Naive Bayes, evaluation
+scikit-learn>=1.5
+
+# Figures
+matplotlib>=3.9
+
+# Notebook
+ipykernel>=6.29

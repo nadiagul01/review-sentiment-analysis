@@ -1,0 +1,16 @@
+# .gitignore - files Git must never upload
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+.ipynb_checkpoints/
+
+# Dataset is large - download it from Kaggle, see data/raw/README.md
+data/raw/*.csv
+data/raw/*.sqlite
+data/raw/*.zip
+
+# Generated data
+data/processed/
