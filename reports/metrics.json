@@ -1,0 +1,78 @@
+{
+  "dataset": {
+    "raw_reviews": 568454,
+    "modelling_reviews": 363829,
+    "negative": 57068,
+    "positive": 306761,
+    "train": 291063,
+    "test": 72766
+  },
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 10000,
+    "min_df": 2,
+    "features": 10000,
+    "negation_bigrams": 336
+  },
+  "cross_validation_mean": {
+    "LinearSVC": {
+      "macro F1": 0.8511,
+      "accuracy": 0.9107,
+      "balanced accuracy": 0.9009,
+      "negative precision": 0.6604,
+      "negative recall": 0.8866,
+      "negative F1": 0.757
+    },
+    "ComplementNB": {
+      "macro F1": 0.8092,
+      "accuracy": 0.8774,
+      "balanced accuracy": 0.8827,
+      "negative precision": 0.57,
+      "negative recall": 0.8903,
+      "negative F1": 0.695
+    },
+    "MultinomialNB": {
+      "macro F1": 0.7539,
+      "accuracy": 0.9007,
+      "balanced accuracy": 0.7007,
+      "negative precision": 0.906,
+      "negative recall": 0.4094,
+      "negative F1": 0.5639
+    },
+    "Majority baseline": {
+      "macro F1": 0.4574,
+      "accuracy": 0.8431,
+      "balanced accuracy": 0.5,
+      "negative precision": 0.0,
+      "negative recall": 0.0,
+      "negative F1": 0.0
+    }
+  },
+  "final_model": "LinearSVC",
+  "best_naive_bayes": "ComplementNB",
+  "test": {
+    "LinearSVC": {
+      "macro F1": 0.8537,
+      "accuracy": 0.9121,
+      "balanced accuracy": 0.9043,
+      "negative precision": 0.6633,
+      "negative recall": 0.893,
+      "negative F1": 0.7612,
+      "ROC-AUC": 0.9656,
+      "PR-AUC (negative class)": 0.8698
+    },
+    "ComplementNB": {
+      "macro F1": 0.8085,
+      "accuracy": 0.8769,
+      "balanced accuracy": 0.8826,
+      "negative precision": 0.5686,
+      "negative recall": 0.8909,
+      "negative F1": 0.6942,
+      "ROC-AUC": 0.9515,
+      "PR-AUC (negative class)": 0.8126
+    }
+  }
+}
